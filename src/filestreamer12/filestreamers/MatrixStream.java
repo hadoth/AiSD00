@@ -1,6 +1,8 @@
 package filestreamer12.filestreamers;
 
+import filestreamer12.utils.Matrix;
+
 public interface MatrixStream {
-	boolean saveFile(double[][] matrix, String savePath);
-	double[][] loadFile(String loadPath);
+	boolean saveFile(Matrix matrix, String savePath);
+	Matrix loadFile(String loadPath);
 }
