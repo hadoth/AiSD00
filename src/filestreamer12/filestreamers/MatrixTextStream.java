@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class TextStreamer implements MatrixStream {
+public class MatrixTextStream implements MatrixStream {
 
 	@Override
 	public boolean saveFile(double[][] matrix, String savePath) {

@@ -2,7 +2,7 @@ package filestreamer12.streamerunittest;
 
 import filestreamer12.filestreamers.MatrixBinaryStream;
 import filestreamer12.filestreamers.MatrixStream;
-import filestreamer12.filestreamers.TextStreamer;
+import filestreamer12.filestreamers.MatrixTextStream;
 import filestreamer12.utils.Matrix;
 
 public class StreamTester {
@@ -12,7 +12,7 @@ public class StreamTester {
 	private Matrix matrix;
 	
 	public static void main(String[] args){
-		StreamTester myTSTest = StreamTester.generateTest(new TextStreamer());
+		StreamTester myTSTest = StreamTester.generateTest(new MatrixTextStream());
 		System.out.println("result " + myTSTest.test(1000));
 		
 		StreamTester myBSTest = StreamTester.generateTest(new MatrixBinaryStream());
