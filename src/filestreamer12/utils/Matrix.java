@@ -1,12 +1,12 @@
 package filestreamer12.utils;
 
-import filestreamer12.filestreamers.*;
+import filestreamer12.filestreamers.MatrixStream;
 
 public class Matrix {
 	private double[][] content;
-	private FileStreamer streamer;
+	private MatrixStream streamer;
 	
-	public Matrix(double[][] content, FileStreamer streamer){
+	public Matrix(double[][] content, MatrixStream streamer){
 		this.content = content;
 		this.streamer = streamer;
 	}

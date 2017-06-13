@@ -1,6 +1,6 @@
 package filestreamer12.filestreamers;
 
-public class NullStream implements FileStreamer {
+public class NullStream implements MatrixStream {
 	public boolean saveFile(double[][] matrix, String savePath) {
 		return false;
 	}

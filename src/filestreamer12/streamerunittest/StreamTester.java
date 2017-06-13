@@ -1,11 +1,13 @@
 package filestreamer12.streamerunittest;
 
-import filestreamer12.filestreamers.*;
-import filestreamer12.utils.*;
+import filestreamer12.filestreamers.MatrixBinaryStream;
+import filestreamer12.filestreamers.MatrixStream;
+import filestreamer12.filestreamers.TextStreamer;
+import filestreamer12.utils.Matrix;
 
 public class StreamTester {
 	private static int testCounter;
-	private FileStreamer streamer;
+	private MatrixStream streamer;
 	private String filePath;
 	private Matrix matrix;
 	
@@ -13,17 +15,17 @@ public class StreamTester {
 		StreamTester myTSTest = StreamTester.generateTest(new TextStreamer());
 		System.out.println("result " + myTSTest.test(1000));
 		
-		StreamTester myBSTest = StreamTester.generateTest(new BinaryStreamer());
+		StreamTester myBSTest = StreamTester.generateTest(new MatrixBinaryStream());
 		System.out.println("result " + myBSTest.test(1000));
 	}
 	
-	public static StreamTester generateTest(FileStreamer streamer) {
+	public static StreamTester generateTest(MatrixStream streamer) {
 		testCounter++;
 		String filePath = "streamTest"+testCounter+".dat";
 		return new StreamTester(streamer, filePath);
 	}
 	
-	private StreamTester(FileStreamer streamer, String filePath){
+	private StreamTester(MatrixStream streamer, String filePath){
 		this.streamer = streamer;
 		this.filePath = filePath;
 	}

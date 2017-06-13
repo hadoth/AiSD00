@@ -1,14 +1,10 @@
 package filestreamer12.filestreamers;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class TextStreamer implements FileStreamer {
+public class TextStreamer implements MatrixStream {
 
 	@Override
 	public boolean saveFile(double[][] matrix, String savePath) {
@@ -24,7 +20,7 @@ public class TextStreamer implements FileStreamer {
 			dataOut.println("Macierz");
 			dataOut.println(String.valueOf(matrix.length));
 			dataOut.println(String.valueOf(matrix[0].length));
-			for (int i = 0; i < matrix.length; i++){;
+			for (int i = 0; i < matrix.length; i++){
 				for (int j = 0; j < matrix[0].length; j++){
 					dataOut.print(matrix[i][j]+"\t");
 				}

@@ -1,9 +1,11 @@
 package filestreamer12.utils;
-import filestreamer12.filestreamers.*;
+
+import filestreamer12.filestreamers.MatrixStream;
+import filestreamer12.filestreamers.NullStream;
 
 public class MatrixBuilder{
 	private double range;
-	private FileStreamer streamer;
+	private MatrixStream streamer;
 	private boolean randomized;
 	private double[][] content;
 	
@@ -39,7 +41,7 @@ public class MatrixBuilder{
 		return this;
 	}
 	
-	public MatrixBuilder withStreamer(FileStreamer streamer){
+	public MatrixBuilder withStreamer(MatrixStream streamer){
 		this.streamer = streamer;
 		return this;
 	}
