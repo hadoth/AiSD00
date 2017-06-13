@@ -6,8 +6,8 @@ public class BinaryStreamer implements FileStreamer {
 
 	@Override
 	public boolean saveFile(double[][] matrix, String savePath) {
-		FileOutputStream fileOut = null;
-		DataOutputStream dataOut = null;
+		FileOutputStream fileOut;
+		DataOutputStream dataOut;
 
 		try {
 			if (matrix.length == 0 || matrix[0].length == 0)
@@ -17,10 +17,10 @@ public class BinaryStreamer implements FileStreamer {
 			
 			dataOut.writeInt(matrix.length);
 			dataOut.writeInt(matrix[0].length);
-			
-			for (int i=0; i < matrix.length; i++)
-				for (int j=0; j < matrix[0].length; j++)
-					dataOut.writeDouble(matrix[i][j]);
+
+            for (double[] aMatrix : matrix)
+                for (double value : aMatrix)
+                    dataOut.writeDouble(value);
 			
 			fileOut.close();
 			dataOut.close();
@@ -32,9 +32,9 @@ public class BinaryStreamer implements FileStreamer {
 
 	@Override
 	public double[][] loadFile(String loadPath) {
-		FileInputStream fileIn = null;
-		DataInputStream dataIn = null;
-		double[][] result = null;
+		FileInputStream fileIn;
+		DataInputStream dataIn;
+		double[][] result;
 		
 		try {
 			fileIn = new FileInputStream(loadPath);
@@ -54,5 +54,4 @@ public class BinaryStreamer implements FileStreamer {
 		}
 		return result;
 	}
-
 }
