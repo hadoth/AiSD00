@@ -2,7 +2,7 @@ package filestreamer12.filestreamers;
 
 import java.io.*;
 
-public class BinaryStreamer implements FileStreamer {
+public class MatrixBinaryStream implements FileStreamer {
 
 	@Override
 	public boolean saveFile(double[][] matrix, String savePath) {
