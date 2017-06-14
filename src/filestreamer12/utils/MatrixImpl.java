@@ -47,6 +47,16 @@ public class MatrixImpl implements Matrix {
     }
 
     @Override
+    public int rows() {
+        return this.content.length > 0 ? this.content[0].length : 0;
+    }
+
+    @Override
+    public int columns() {
+        return this.content.length;
+    }
+
+    @Override
     public double[][] toArray() {
         double[][] result = new double[this.content.length][this.content[0].length];
         for (int i = 0; i < this.content.length; i++) {
