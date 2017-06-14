@@ -6,5 +6,7 @@ package filestreamer12.utils;
 public interface Matrix {
     boolean setValue(int rowIndex, int columnIndex, double value);
     double getValue(int rowIndex, int columnIndex);
+    int rows();
+    int columns();
     double[][] toArray();
 }
