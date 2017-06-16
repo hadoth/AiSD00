@@ -5,7 +5,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class MatrixTextStream implements MatrixStream {
-    public static final String MATRIX_DIMENSIONS_EXCEPTION = "Matrix dimensions must be grater than zero";
+    public static final String MATRIX_DIMENSIONS_EXCEPTION = "MatrixImpl dimensions must be grater than zero";
     public static final String MATRIX_NAME_PL = "Macierz";
 
     @Override
